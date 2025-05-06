@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipient Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Recipient</h2>
+    <ul>
+      <li><a href="#" class="active">Active Food List</a></li>
+      <li><a href="#">Notifications</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Requested Food</h1>
+    </header>
+
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Donor</th>
+            <th>Status</th>
+            <th>Requested On</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cooked Rice</td>
+            <td>4 servings</td>
+            <td>Happy Meals</td>
+            <td><span class="status requested">Requested</span></td>
+            <td>2025-05-03</td>
+          </tr>
+          <tr>
+            <td>Chapati & Sabzi</td>
+            <td>6 packs</td>
+            <td>Golden Plate</td>
+            <td><span class="status collected">Collected</span></td>
+            <td>2025-04-30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

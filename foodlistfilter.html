@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Search and Filter</title>
+  <link rel="stylesheet" href="style.css">
+
+
+
+
+<body>
+    <div class="filter-container">
+      <h1>Find Surplus Food</h1>
+      <input type="text" id="mainSearch" placeholder="Search Food..." onfocus="showFilters()">
+      <form>
+        <div class="filters">
+          <div class="filter-group">
+            <label for="foodType">Food Type</label>
+            <select id="foodType">
+              <option value="">All Types</option>
+              <option value="uncooked">Uncooked</option>
+              
+              <option value="cooked">Cooked Meals</option>
+              <option value="packaged">Packaged Food</option>
+      
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="City or Area">
+          </div>
+          <div class="filter-group">
+            <label for="expiryDate">Expiry Before</label>
+            <input type="date" id="expiryDate">
+          </div>
+          
+        </div>
+        <button type="submit" class="filter-btn">Search Food</button>
+      </form>
+    </div>
+    <script>
+      function showFilters() {
+        document.getElementById('filterForm').style.display = 'block';
+      }
+    </script>
+  </body>
+  </html>
+  
