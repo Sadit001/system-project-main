@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Redirect to dashboard if user is Admin
     if (userType === 'admin') {
-      window.location.href = 'dashboard.html';
+      window.location.href = 'admin.html';
     } else {
       // If not admin, you can redirect to a different page if you want
       // Example: window.location.href = 'home.html';
