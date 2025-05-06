@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipient Dashboard</title>
+  <link rel="stylesheet" href="recipientdashboard.css">
+</head>
+<body>
+
+<h2>Recipient Dashboard</h2>
+
+<table id="recipientTable">
+  <thead>
+    <tr>
+      <th>Recipient Name</th>
+      <th>Contact Number</th>
+      <th>NID Number</th>
+      <th>License Number</th>
+      <th>Order Status</th>
+      <th>Order Date</th>
+      <th>Status</th>
+      <th>Toggle</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Doe</td>
+      <td>01234567890</td>
+      <td>1234567890</td>
+      <td>LIC001</td>
+      <td>Pending</td>
+      <td>2025-05-01</td>
+      <td class="status active">Active</td>
+      <td><button class="toggle-btn" onclick="toggleStatus(this)">Toggle</button></td>
+      <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Jane Smith</td>
+      <td>01987654321</td>
+      <td>9876543210</td>
+      <td>LIC002</td>
+      <td>Confirmed</td>
+      <td>2025-05-02</td>
+      <td class="status blocked">Blocked</td>
+      <td><button class="toggle-btn" onclick="toggleStatus(this)">Toggle</button></td>
+      <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Nela Khan</td>
+      <td>0191455321</td>
+      <td>9876453210</td>
+      <td>LIC010</td>
+      <td>Pending</td>
+      <td>2025-05-03</td>
+      <td class="status blocked">Blocked</td>
+      <td><button class="toggle-btn" onclick="toggleStatus(this)">Toggle</button></td>
+      <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Sadia Alam Kotha</td>
+      <td>01784924321</td>
+      <td>98815543210</td>
+      <td>LIC0122</td>
+      <td>Confirmed</td>
+      <td>2025-05-04</td>
+      <td class="status blocked">Blocked</td>
+      <td><button class="toggle-btn" onclick="toggleStatus(this)">Toggle</button></td>
+      <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<script src="recipientdashboard.js"></script>
+</body>
+</html>

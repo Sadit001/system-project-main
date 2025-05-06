@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Leftover Food</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="#" method="POST">
+      <label for="username">Username or Email</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="user_type">Login as:</label>
+      <select id="user_type" name="user_type" required>
+        <option value="">Select user type</option>
+        <option value="donor">Food Donor</option>
+        <option value="recipient">Food Recipient</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <a href="signup.html">Don't have an account? Sign up</a>
+      <a href="forget-password.html">Forgot Password?</a>
+    </div>
+  </div>
+
+  <!-- JavaScript Connection -->
+  <script src="login.js"></script>
+</body>
+</html>

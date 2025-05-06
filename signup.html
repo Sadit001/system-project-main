@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Leftover Food</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Sign Up</h2>
+    <form id="signUpForm" action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" placeholder="e.g. 017xxxxxxxx">
+
+      <label for="trade_license">Trade License Number</label>
+      <input type="text" id="trade_license" name="trade_license" placeholder="Optional if not a business">
+
+      <label for="role">Register as:</label>
+      <select id="role" name="role" required>
+        <option value="">Select Role</option>
+        <option value="donor">Food Donor</option>
+        <option value="recipient">Food Recipient</option>
+      </select>
+
+      <button type="submit">Done</button>
+    </form>
+
+    <div class="extra-links">
+      <a href="login.html">Already have an account? Login</a>
+    </div>
+  </div>
+
+  <!-- JavaScript Connection -->
+  <script src="sign-up.js"></script>
+</body>
+</html>
