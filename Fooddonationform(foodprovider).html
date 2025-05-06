@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Donation Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>🍲 Food Donation Form</h2>
+
+    <!-- Notification Area -->
+    <div id="notification" class="notification"></div>
+
+    <form id="donationForm" class="donation-form">
+      <label for="foodName">Food Name</label>
+      <input type="text" id="foodName" name="foodName" required>
+
+      <label for="quantity">Quantity (in servings or units)</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <label for="pickupAddress">Pickup Address</label>
+      <textarea id="pickupAddress" name="pickupAddress" rows="3" required></textarea>
+
+      <label for="availableUntil">Available Until</label>
+      <input type="datetime-local" id="availableUntil" name="availableUntil" required>
+
+      <label for="expiryTime">Expiry Time</label>
+      <input type="datetime-local" id="expiryTime" name="expiryTime" required>
+
+      <button type="submit">Submit Donation</button>
+    </form>
+
+    <h3>All Donations</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Food</th>
+          <th>Qty</th>
+          <th>Address</th>
+          <th>Available Until</th>
+          <th>Expiry Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="donationList">
+        <!-- Dynamic rows will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="Fooddonationform(foodprovider).js"></script>
+
+</body>
+</html>

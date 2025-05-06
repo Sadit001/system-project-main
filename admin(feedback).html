@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Table</title>
+  <link rel="stylesheet" href="admin(feedback).css">
+</head>
+<body>
+
+  <button onclick="goBack()" class="back-button">← Back</button>
+
+  <h2>User Feedback</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>User Type</th>
+        <th>Comment</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>john_doe</td>
+        <td><span class="donor">Donor</span></td>
+        <td>Very smooth donation process.</td>
+        <td class="star-rating">★★★★★</td>
+      </tr>
+      <tr>
+        <td>sadia_k</td>
+        <td><span class="recipient">Recipient</span></td>
+        <td>Received timely help, thank you!</td>
+        <td class="star-rating">★★★★☆</td>
+      </tr>
+      <tr>
+        <td>ronon_dev</td>
+        <td><span class="donor">Donor</span></td>
+        <td>Happy to support this initiative.</td>
+        <td class="star-rating">★★★★★</td>
+      </tr>
+      <tr>
+        <td>arif_hasan</td>
+        <td><span class="recipient">Recipient</span></td>
+        <td>Great support, highly appreciated!</td>
+        <td class="star-rating">★★★★☆</td>
+      </tr>
+      <tr>
+        <td>nazia_rahman</td>
+        <td><span class="donor">Donor</span></td>
+        <td>Easy and effective process.</td>
+        <td class="star-rating">★★★★★</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function goBack() {
+      // Replace with your target URL or use history.back()
+      window.location.href = "admin.html"; // Change "home.html" to your actual page
+      // OR: history.back(); to go to previous page
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 40px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #1d3446;
+    color: white;
+  }
+  
+  .star-rating {
+    color: gold;
+    font-size: 1.2em;
+  }
+  
+  .donor {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .recipient {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    td {
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+  
+    td::before {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 45%;
+      white-space: nowrap;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    td:nth-of-type(1)::before { content: "Username"; }
+    td:nth-of-type(2)::before { content: "User Type"; }
+    td:nth-of-type(3)::before { content: "Comment"; }
+    td:nth-of-type(4)::before { content: "Rating"; }
+  }
+  .back-button {
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #ccc;
+  }
+    

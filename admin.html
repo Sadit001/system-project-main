@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li><a href="admin(donor).html">Donor</a></li>
+        <li><a href="recipient.html">Recipient</a></li>
+        <li><a href="admin(feedback).html">Feedback</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </aside>
+    
+    <main class="main-content">
+      <h1>Admin Dashboard</h1>
+
+      <div class="dashboard-grid">
+        <!-- Horizontal Bar Chart Card -->
+        <div class="card chart-card">
+          <h3>User Distribution (Horizontal Bar)</h3>
+          <canvas id="horizontalBarChart"></canvas>
+        </div>
+
+        <!-- Analysis Table -->
+        <div class="card analysis-card">
+          <h3>Advanced Analysis</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background-color: #f0f0f0;">
+                <th style="text-align: left; padding: 8px;">Metric</th>
+                <th style="text-align: left; padding: 8px;">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 8px;">% Donors</td>
+                <td id="percentDonors" style="padding: 8px;"></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px;">% Recipients</td>
+                <td id="percentRecipients" style="padding: 8px;"></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px;">Avg Monthly Registration</td>
+                <td id="avgMonthly" style="padding: 8px;"></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px;">Peak Month</td>
+                <td id="peakMonth" style="padding: 8px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Line Chart Card -->
+        <div class="card chart-card">
+          <h3>Monthly Registrations</h3>
+          <canvas id="lineChart"></canvas>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const donorCount = 70;
+    const recipientCount = 45;
+
+    // Horizontal Bar Chart
+    const hBarCtx = document.getElementById('horizontalBarChart').getContext('2d');
+    new Chart(hBarCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Donors', 'Recipients'],
+        datasets: [{
+          label: 'Users',
+          data: [donorCount, recipientCount],
+          backgroundColor: ['#9c27b0', '#03a9f4']
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Line Chart
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'New Users',
+          data: [15, 25, 18, 30, 22],
+          borderColor: '#FF5722',
+          backgroundColor: 'rgba(255, 87, 34, 0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: true } }
+      }
+    });
+
+    // Advanced Analysis Table Values
+    const total = donorCount + recipientCount;
+    document.getElementById('percentDonors').textContent = ((donorCount / total) * 100).toFixed(1) + '%';
+    document.getElementById('percentRecipients').textContent = ((recipientCount / total) * 100).toFixed(1) + '%';
+
+    const monthlyData = [15, 25, 18, 30, 22];
+    const avgMonthly = monthlyData.reduce((a, b) => a + b, 0) / monthlyData.length;
+    document.getElementById('avgMonthly').textContent = avgMonthly.toFixed(1);
+
+    const peakIndex = monthlyData.indexOf(Math.max(...monthlyData));
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
+    document.getElementById('peakMonth').textContent = months[peakIndex];
+  </script>
+</body>
+</html>

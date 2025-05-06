@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donor Management</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="donor.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li><a href="admin(donor).html">Donor</a></li>
+        <li><a href="recipient.html">Recipient</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>Donor Management</h1>
+      
+      <button class="back-btn" id="backBtn">Back </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>NID Number</th>
+            <th>Contact</th>
+            <th>Trade License</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="donorTableBody">
+          <!-- JS will inject data here -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="admin(donor).js"></script>
+</body>
+</html>
