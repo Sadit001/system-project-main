@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Redirect to dashboard if user is Admin
     if (userType === 'admin') {
       window.location.href = 'admin.html';
+    } else if (userType === 'donor') {
+      window.location.href = 'donor.html';
+    } else if (userType === 'recipient') {
+      window.location.href = 'recipient.html';
     } else {
-      // If not admin, you can redirect to a different page if you want
-      // Example: window.location.href = 'home.html';
-      alert('You are not Admin. Access to Dashboard is restricted.');
+      alert(' Access to Dashboard is restricted.');
     }
   });
 });
