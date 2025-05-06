@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donor Dashboard - Leftover Connect</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="sidebar">
@@ -47,7 +47,7 @@
             <th>Food Item</th>
             <th>Category</th>
             <th>Status</th>
-            <th>Posted On</th>
+            <th>Expires On</th>
           </tr>
         </thead>
         <tbody>
@@ -62,10 +62,15 @@
             <td>Dry Goods</td>
             <td><span class="status collected">Collected</span></td>
             <td>2025-04-27</td>
+            
           </tr>
+          <tbody id="foodList">
+            
+          </tbody>
         </tbody>
       </table>
     </section>
   </div>
+  <script src="warning.js"></script>
 </body>
 </html>
