@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donor Notifications</title>
+  <link rel="stylesheet" href="notification.css">
+</head>
+<body>
+
+  <h2>Food Donation Requests</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Recipient Name</th>
+        <th>Order Date</th>
+        <th>Food Name</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="notificationTable">
+      <!-- Sample static rows; you can also populate via JS -->
+      <tr>
+        <td>Lubna Akter</td>
+        <td>2025-05-06</td>
+        <td>Cooked Rice</td>
+        <td>3 Packs</td>
+        <td>
+          <button class="btn approve">Approve</button>
+          <button class="btn reject">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Tanvir Hossain</td>
+        <td>2025-05-07</td>
+        <td>Bread & Eggs</td>
+        <td>5 Sets</td>
+        <td>
+          <button class="btn approve">Approve</button>
+          <button class="btn reject">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="notification.js"></script>
+</body>
+</html>
