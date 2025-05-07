@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (userType === 'donor') {
       window.location.href = 'fooddonordash.html';
     } else if (userType === 'recipient') {
-      window.location.href = 'recipient.html';
+      window.location.href = 'foodrecep.html';
     } else {
       alert(' Access to Dashboard is restricted.');
     }
