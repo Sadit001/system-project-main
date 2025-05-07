@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (userType === 'admin') {
       window.location.href = 'admin.html';
     } else if (userType === 'donor') {
-      window.location.href = 'donor.html';
+      window.location.href = 'fooddonordash.html';
     } else if (userType === 'recipient') {
       window.location.href = 'recipient.html';
     } else {
