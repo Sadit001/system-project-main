@@ -31,7 +31,7 @@ let donors = [
   
   function renderTable() {
     const tbody = document.getElementById("donorTableBody");
-    tbody.innerHTML = ""; // Clear old rows
+    tbody.innerHTML = ""; 
   
     donors.forEach((donor, index) => {
       const row = document.createElement("tr");
@@ -69,7 +69,6 @@ let donors = [
   }
   
   function viewFood(index) {
-    // Redirect to viewfood.html with donor index in query
     window.location.href = `food-listing.html?donor=${index}`;
   }
   

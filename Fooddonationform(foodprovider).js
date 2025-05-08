@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const row = e.target.closest('tr');
       const cells = row.querySelectorAll('td');
 
-      // Store data in localStorage
       localStorage.setItem('editDonation', JSON.stringify({
         id: cells[0].textContent,
         foodName: cells[1].textContent,
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         expiryTime: cells[5].textContent
       }));
 
-      // Go to edit page
       window.location.href = 'Fooddonationedit.html';
     }
   });

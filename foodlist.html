@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Available Foods</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food List</title>
+  <link rel="stylesheet" href="foodlist.css" />
 </head>
 <body>
-  
 
-
-  <div class="list-container">
+  <div class="container">
     <h1>Available Surplus Foods</h1>
-
-    <table class="food-table">
+    <button class="back-btn" onclick="window.location.href='fooddonordash.html'">← Back</button>
+    <table>
       <thead>
         <tr>
           <th>Food Name</th>
@@ -22,8 +20,7 @@
           <th>Expiry Date</th>
           <th>Organization</th>
           <th>Action</th>
-          <th>status</th>
-          
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -31,25 +28,69 @@
           <td>Fresh Apples</td>
           <td>Uncooked</td>
           <td>Badda</td>
-          <td>2025-05-05</td>
+          <td>2025-05-12</td>
           <td>ABC Hotel</td>
           <td><button class="request-btn">Request Food</button></td>
-          <td><button class="Available-btn">available</button></td>
+          <td><span class="status">Available</span></td>
         </tr>
         <tr>
           <td>Cooked Rice Meal</td>
           <td>Cooked Meal</td>
-          <td>Puran dhaka</td>
-          <td>2025-04-28</td>
-          <td>XYZ Event Center</td>
-          
+          <td>Mirpur</td>
+          <td>2025-05-10</td>
+          <td>XYZ Banquet Hall</td>
           <td><button class="request-btn">Request Food</button></td>
-          <td><button class="Available-btn">available</button></td>
+          <td><span class="status">Available</span></td>
         </tr>
-        <!-- More rows can be added dynamically -->
+        <tr>
+          <td>Vegetable Curry</td>
+          <td>Cooked Meal</td>
+          <td>Uttara</td>
+          <td>2025-05-11</td>
+          <td>Green Leaf Restaurant</td>
+          <td><button class="request-btn">Request Food</button></td>
+          <td><span class="status">Available</span></td>
+        </tr>
+        <tr>
+          <td>Chicken Sandwiches</td>
+          <td>Snack</td>
+          <td>Dhanmondi</td>
+          <td>2025-05-09</td>
+          <td>City Cafe</td>
+          <td><button class="request-btn">Request Food</button></td>
+          <td><span class="status">Available</span></td>
+        </tr>
+        <tr>
+          <td>Milk Packets</td>
+          <td>Uncooked</td>
+          <td>Mohakhali</td>
+          <td>2025-05-13</td>
+          <td>Dairy Co-op</td>
+          <td><button class="request-btn">Request Food</button></td>
+          <td><span class="status">Available</span></td>
+        </tr>
+        <tr>
+          <td>Fried Rice & Chicken</td>
+          <td>Cooked Meal</td>
+          <td>Banani</td>
+          <td>2025-05-08</td>
+          <td>Spicy Bites</td>
+          <td><button class="request-btn">Request Food</button></td>
+          <td><span class="status">Available</span></td>
+        </tr>
+        <tr>
+          <td>Bananas</td>
+          <td>Uncooked</td>
+          <td>Farmgate</td>
+          <td>2025-05-14</td>
+          <td>Fresh Market</td>
+          <td><button class="request-btn">Request Food</button></td>
+          <td><span class="status">Available</span></td>
+        </tr>
       </tbody>
     </table>
   </div>
 
+  <script src="foodlist.js"></script>
 </body>
 </html>

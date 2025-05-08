@@ -1,4 +1,3 @@
-// Dummy food data per donor index
 const donorFoodData = {
   0: [
     { name: "Chicken Biryani", quantity: "10 plates", date: "2025-05-01" },

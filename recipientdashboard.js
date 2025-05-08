@@ -1,6 +1,6 @@
 function deleteRow(button) {
     const row = button.closest("tr");
-    const name = row.cells[0].textContent; // Get recipient name for confirmation
+    const name = row.cells[0].textContent; 
   
     const confirmed = confirm(`Are you sure you want to delete recipient "${name}"?`);
     if (confirmed) {
